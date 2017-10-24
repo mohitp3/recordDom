@@ -52,16 +52,6 @@ RecordableDrawing = function (canvasId)
 
 	}
 
-	onScrollRec = function(){
-		var x = Math.floor(event.pageX);
-		var y = Math.floor(event.pageY);
-		var	currAction = new Point(x,y,2);
-		// self.drawAction(currAction, true);
-		if (self.currentRecording != null)
-			self.currentRecording.addAction(currAction);
-		event.preventDefault();
-
-	}
 
 	
 	this.startRecording = function()
@@ -234,7 +224,6 @@ RecordableDrawing = function (canvasId)
 		// self.ctx = self.canvas.getContext("2d");
 		document.addEventListener("mousemove", onMouseMove);
 		document.addEventListener("click", onClickRec);
-		document.addEventListener("scroll", onScrollRec);
 		self.clearCanvas();		
 	}
 	
