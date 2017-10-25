@@ -179,7 +179,7 @@ RecordableDrawing = function (canvasId)
 	{
 		var x = actionArg.x;
 		var y = actionArg.y;
-		mouse.scrollIntoView(false);
+		mouse.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
 		switch (actionArg.type)
 		{
 		case 0: //moveto
