@@ -98,6 +98,12 @@
 	
 	function startPlayback()
 	{
+		var elem = document.getElementsByClassName("recClicks");
+			if(elem.length){
+				while (elem[0]) {
+					elem[0].parentNode.removeChild(elem[0]);
+				}
+			}
 		drawing.playRecording(function() {
 			//on playback start
 			$("#playBtn .ui-btn-text").text("Stop");
